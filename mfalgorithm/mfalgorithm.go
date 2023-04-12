@@ -49,17 +49,17 @@ func SetMnemonic(mnemonicsRandom []string, mnemonics []string, wordListRandom []
 	return wordListRandom
 }
 
-func GetSeed(mnemonicsRandom []string, list []string) []byte {
+func GetSeed(mnemonics []string, list []string) []byte {
 	var seed []byte
-	mnemonicsLen := len(mnemonicsRandom)
+	mnemonicsLen := len(mnemonics)
 	seedAddLen := 0
 	if 128%mnemonicsLen != 0 {
 		n := 128 % mnemonicsLen
 		seedAddLen = mnemonicsLen - n
 	}
-	lenPerSeg := (128 + seedAddLen) / len(mnemonicsRandom)
+	lenPerSeg := (128 + seedAddLen) / len(mnemonics)
 	formatStr := "%0" + strconv.FormatInt(int64(lenPerSeg), 10) + "b"
-	for _, word := range mnemonicsRandom {
+	for _, word := range mnemonics {
 		for i, v := range list {
 			if v == word {
 				s2 := fmt.Sprintf(formatStr, int64(i))
