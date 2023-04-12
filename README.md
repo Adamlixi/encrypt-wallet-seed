@@ -48,5 +48,5 @@ The hacker just have two way to crack it.
 
 
 ## Some problems:
-1. People may frequently just using small part of the wordlist(maybe 8k words are frequently used), and this makes the entropy for customized words very small.
+1. People may frequently just using small part of the wordlist(maybe 8k words are frequently used), and this makes the entropy for customized words very small.  
 We can change the content of the wordlist. Adding more things people like to use. For example, we can add emoji, common Chinese words, common Japanese words,.. etc. We can have a discussion in community. And make all the stuffs in the word list are people frequently use in their life. And this will make the hacker more difficult to guess the password.
